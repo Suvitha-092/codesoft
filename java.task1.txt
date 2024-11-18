@@ -1,0 +1,48 @@
+class Main {
+
+  public static void main(String[] args) {
+ 
+   Scanner sc = new Scanner(System.in);
+  
+  int r = sc.nextInt();
+ 
+   int g = sc.nextInt();
+  
+  int s = 1, e = 100;
+
+  
+  while (s <= e) {
+  
+    int m = (s + e) / 2;
+     
+ 
+      if (r == m && g == m) {
+  
+      System.out.println("true");
+  
+      break;
+    
+  } 
+else if (r < m && g < m) {
+  
+      e = m - 1;
+   
+   }
+ else if (r > m && g > m) {
+   
+     s = m + 1;
+  
+    } 
+else {
+ 
+       System.out.println("false");
+      
+  break;
+   
+   }
+  
+  }
+
+  }
+
+}
